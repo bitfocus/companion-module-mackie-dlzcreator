@@ -1,0 +1,32 @@
+{
+	"id": "mackie-dlzcreator",
+	"name": "mackie-dlzcreator",
+	"shortname": "dlzcreator",
+	"description": "Control Mackie DLZ Creator and DLZ Creator XS digital mixers",
+	"version": "1.0.4",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-mackie-dlzcreator.git",
+	"bugs": "https://github.com/bitfocus/companion-module-mackie-dlzcreator/issues",
+	"maintainers": [
+		{
+			"name": "Daniel Sörlöv",
+			"email": "daniel@sorlov.com"
+		}
+	],
+	"legacyIds": [],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "1.14.0",
+		"entrypoint": "../dist/main.js"
+	},
+	"manufacturer": "Mackie",
+	"products": ["DLZ Creator", "DLZ Creator XS"],
+	"keywords": ["Audio", "Mixer", "Podcast", "Streaming"],
+	"bonjourQueries": {
+		"bonjourHost": {
+			"type": "http",
+			"protocol": "tcp"
+		}
+	}
+}
