@@ -3,6 +3,7 @@
 ## v1.0.5
 
 - Changes as required by BitFocus, no functional changes
+- Fixed some linting errors
 
 ## v1.0.4
 

@@ -1,6 +1,15 @@
 import type { CompanionVariableDefinition, CompanionVariableValues } from '@companion-module/base'
 import type { DlzState } from './state.js'
-import { ModelType, MODEL_CONFIGS, RecState, PlayerState, BtStatus, getAvailableChannels, ChannelType, COLOR_LABELS } from './constants.js'
+import {
+	ModelType,
+	MODEL_CONFIGS,
+	RecState,
+	PlayerState,
+	BtStatus,
+	getAvailableChannels,
+	ChannelType,
+	COLOR_LABELS,
+} from './constants.js'
 import { formatDb, formatTime } from './utils.js'
 
 /**

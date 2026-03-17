@@ -1,5 +1,6 @@
 import type { InstanceBase } from '@companion-module/base'
 import { ModelType, MODEL_CONFIGS } from './constants.js'
+import type { ModelConfig } from './constants.js'
 import type { ModuleConfig, ModelSelection } from './config.js'
 
 /**
@@ -35,7 +36,7 @@ export class DlzState {
 		return this._model
 	}
 
-	get config() {
+	get config(): ModelConfig {
 		return MODEL_CONFIGS[this._model]
 	}
 

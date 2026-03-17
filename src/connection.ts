@@ -89,7 +89,7 @@ export class DlzConnection {
 	 * Optimistically updates local state because the mixer only broadcasts
 	 * state changes to OTHER clients (Socket.IO broadcast), not back to the sender.
 	 */
-	setState(key: string, value: any): void {
+	setState(key: string, value: string | number | boolean): void {
 		this.send({ [key]: value })
 		if (this._connected) {
 			this.onStateUpdate({ [key]: value })

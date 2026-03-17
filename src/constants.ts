@@ -283,18 +283,7 @@ export const SAMPLE_COLORS_DIM = [
 	'#513b59',
 ]
 
-export const COLOR_LABELS = [
-	'Pink',
-	'Red',
-	'Orange',
-	'Amber',
-	'Yellow',
-	'Green',
-	'Mint',
-	'Teal',
-	'Blue',
-	'Purple',
-]
+export const COLOR_LABELS = ['Pink', 'Red', 'Orange', 'Amber', 'Yellow', 'Green', 'Mint', 'Teal', 'Blue', 'Purple']
 
 // ── Default Sample Names ──────────────────────────────────────────────
 

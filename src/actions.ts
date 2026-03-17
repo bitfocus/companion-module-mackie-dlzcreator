@@ -6,7 +6,15 @@ import { clamp, VtoMix, MixToV, dbToTrim, dbToEqGain, hzToEqFreq, valToEqQ } fro
 import { dbToCompThresh, dbToCompGain, valToCompRatio, msToCompAttack, msToCompRelease, msToCompHold } from './utils.js'
 import { dbToGateThresh, dbToGateDepth, msToGateAttack, msToGateRelease, msToGateHold } from './utils.js'
 import { dbToDsThresh, hzToDsFreq, dbToDsRange } from './utils.js'
-import { msToRevPredelay, msToRevTime, hzToRevLpf, msToDelTime, pctToDelFeedback, hzToDelLpf, msToDelay } from './utils.js'
+import {
+	msToRevPredelay,
+	msToRevTime,
+	hzToRevLpf,
+	msToDelTime,
+	pctToDelFeedback,
+	hzToDelLpf,
+	msToDelay,
+} from './utils.js'
 import {
 	getAllChannelChoices,
 	getInputChannelChoices,
@@ -41,7 +49,11 @@ function resolveToggle(actionValue: string, currentState: any): number {
 	return parseInt(actionValue, 10)
 }
 
-export function GetActions(connection: DlzConnection, state: DlzState, instance: InstanceBase<ModuleConfig>): CompanionActionDefinitions {
+export function GetActions(
+	connection: DlzConnection,
+	state: DlzState,
+	instance: InstanceBase<ModuleConfig>,
+): CompanionActionDefinitions {
 	const model = state.model
 
 	return {
@@ -155,7 +167,10 @@ export function GetActions(connection: DlzConnection, state: DlzState, instance:
 				const key = ch + 'mute'
 				const raw = state.get(key)
 				const newVal = resolveToggle(action.options.value as string, raw)
-				instance.log('debug', `Mute toggle: key=${key} rawState=${JSON.stringify(raw)} (type=${typeof raw}) -> sending ${newVal}`)
+				instance.log(
+					'debug',
+					`Mute toggle: key=${key} rawState=${JSON.stringify(raw)} (type=${typeof raw}) -> sending ${newVal}`,
+				)
 				connection.setState(key, newVal)
 			},
 		},
@@ -184,7 +199,10 @@ export function GetActions(connection: DlzConnection, state: DlzState, instance:
 				const key = ch + 'solo'
 				const raw = state.get(key)
 				const newVal = resolveToggle(action.options.value as string, raw)
-				instance.log('debug', `Solo toggle: key=${key} rawState=${JSON.stringify(raw)} (type=${typeof raw}) -> sending ${newVal}`)
+				instance.log(
+					'debug',
+					`Solo toggle: key=${key} rawState=${JSON.stringify(raw)} (type=${typeof raw}) -> sending ${newVal}`,
+				)
 				connection.setState(key, newVal)
 			},
 		},
@@ -372,7 +390,10 @@ export function GetActions(connection: DlzConnection, state: DlzState, instance:
 				const key = ch + 'phantom'
 				const raw = state.get(key)
 				const newVal = resolveToggle(action.options.value as string, raw)
-				instance.log('debug', `Phantom toggle: key=${key} rawState=${JSON.stringify(raw)} (type=${typeof raw}) -> sending ${newVal}`)
+				instance.log(
+					'debug',
+					`Phantom toggle: key=${key} rawState=${JSON.stringify(raw)} (type=${typeof raw}) -> sending ${newVal}`,
+				)
 				connection.setState(key, newVal)
 			},
 		},

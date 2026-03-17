@@ -51,7 +51,9 @@ export function SQRtoV(min: number, max: number): (val: number) => number {
  * This is the exact polynomial from the DLZ Creator firmware.
  */
 export function VtoMix(v: number): number {
-	let db = v * (212.46963343266762 + v * (v * (185.11460729522545 + -54.28829155946011 * v) - 261.6726216708534)) - 71.62332749757951
+	let db =
+		v * (212.46963343266762 + v * (v * (185.11460729522545 + -54.28829155946011 * v) - 261.6726216708534)) -
+		71.62332749757951
 	if (v < 0.055) {
 		const sine = Math.sin(28.559933214452666 * v)
 		if (sine < 1e-10) return -200

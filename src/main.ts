@@ -1,9 +1,4 @@
-import {
-	InstanceBase,
-	InstanceStatus,
-	runEntrypoint,
-	type SomeCompanionConfigField,
-} from '@companion-module/base'
+import { InstanceBase, InstanceStatus, runEntrypoint, type SomeCompanionConfigField } from '@companion-module/base'
 import { GetConfigFields, type ModuleConfig } from './config.js'
 import { DlzConnection } from './connection.js'
 import { DlzState } from './state.js'
@@ -144,8 +139,7 @@ class DlzCreatorInstance extends InstanceBase<ModuleConfig> {
 			if (key.includes('ds.bypass')) feedbacks.add('ds_bypass')
 			if (key.endsWith('.bypass') && key.startsWith('f.')) feedbacks.add('fx_bus_bypass')
 			if (key === 'recState') feedbacks.add('rec_active').add('rec_paused').add('rec_any')
-			if (key === 'player.state')
-				feedbacks.add('player_playing').add('player_paused').add('player_stopped')
+			if (key === 'player.state') feedbacks.add('player_playing').add('player_paused').add('player_stopped')
 			if (key === 'btStatus') feedbacks.add('bt_connected').add('bt_paired')
 			if (key === 'settings.bt.enabled') feedbacks.add('bt_enabled')
 			if (key.includes('.active') && key.startsWith('B.')) feedbacks.add('pad_active')
@@ -154,8 +148,7 @@ class DlzCreatorInstance extends InstanceBase<ModuleConfig> {
 			if (key === 'ctrl.fade.enable') feedbacks.add('fade_enabled')
 			if (key.endsWith('.color')) feedbacks.add('channel_color')
 			if (key.endsWith('.mix')) feedbacks.add('channel_fader_level')
-			if (key.endsWith('.gain') && !key.includes('comp.') && !key.includes('eq.'))
-				feedbacks.add('input_gain_level')
+			if (key.endsWith('.gain') && !key.includes('comp.') && !key.includes('eq.')) feedbacks.add('input_gain_level')
 			if (key === 'settings.rec.mtk') feedbacks.add('rec_multitrack')
 			if (key === 'fx.rev.enabled') feedbacks.add('fx_reverb_enabled')
 			if (key === 'fx.del.enabled') feedbacks.add('fx_delay_enabled')
