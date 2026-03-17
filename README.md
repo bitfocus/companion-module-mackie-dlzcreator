@@ -26,7 +26,7 @@ Companion module for the [Mackie DLZ Creator](https://mackie.com/dlz-creator) an
 
 - Mackie DLZ Creator or DLZ Creator XS running firmware with web UI
 - Network connectivity between Companion and the mixer (same subnet)
-- [Bitfocus Companion](https://bitfocus.io/companion) v3.x or later
+- [Bitfocus Companion](https://bitfocus.io/companion) v4.2 or later
 
 ## Development
 

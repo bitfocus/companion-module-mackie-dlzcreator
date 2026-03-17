@@ -1,5 +1,9 @@
 # History
 
+## v1.0.5
+
+- Changes as required by BitFocus, no functional changes
+
 ## v1.0.4
 
 - Current development version

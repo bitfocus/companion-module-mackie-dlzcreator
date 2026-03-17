@@ -3,7 +3,7 @@
 	"name": "mackie-dlzcreator",
 	"shortname": "dlzcreator",
 	"description": "Control Mackie DLZ Creator and DLZ Creator XS digital mixers",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"license": "MIT",
 	"repository": "git+https://github.com/bitfocus/companion-module-mackie-dlzcreator.git",
 	"bugs": "https://github.com/bitfocus/companion-module-mackie-dlzcreator/issues",
